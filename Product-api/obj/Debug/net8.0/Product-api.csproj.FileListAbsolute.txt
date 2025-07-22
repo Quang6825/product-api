@@ -313,10 +313,11 @@ D:\ts\Product-api\Product-api\obj\Debug\net8.0\staticwebassets.build.json
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\staticwebassets.development.json
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\ts\Product-api\Product-api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\Product-.786B8C6C.Up2Date
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\Product-api.dll
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\refint\Product-api.dll
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\Product-api.pdb
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\Product-api.genruntimeconfig.cache
 D:\ts\Product-api\Product-api\obj\Debug\net8.0\ref\Product-api.dll
+D:\ts\Product-api\Product-api\obj\Debug\net8.0\Product-api.sourcelink.json
+D:\ts\Product-api\Product-api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

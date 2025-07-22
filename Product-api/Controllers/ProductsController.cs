@@ -17,7 +17,14 @@ namespace tesstt.Controllers
         public async Task<IEnumerable<ProductDto>> GetAll()
         {
             return await _db.Products
-                .Select(p => new ProductDto { Id = p.Id, Name = p.Name, Price = p.Price })
+                .Select(p => new ProductDto
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Price = p.Price,
+                    Quantity = p.Quantity,
+                    Category = p.Category
+                })
                 .ToListAsync();
         }
 
@@ -26,7 +33,14 @@ namespace tesstt.Controllers
         {
             var p = await _db.Products
                 .Where(x => x.Id == id)
-                .Select(x => new ProductDto { Id = x.Id, Name = x.Name, Price = x.Price })
+                .Select(x => new ProductDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Price = x.Price,
+                    Quantity = x.Quantity,
+                    Category = x.Category
+                })
                 .FirstOrDefaultAsync();
 
             if (p == null) return NotFound();
@@ -36,11 +50,24 @@ namespace tesstt.Controllers
         [HttpPost]
         public async Task<ActionResult<ProductDto>> Create(ProductDto input)
         {
-            var product = new Product { Name = input.Name, Price = input.Price };
+            var product = new Product
+            {
+                Name = input.Name,
+                Price = input.Price,
+                Quantity = input.Quantity,
+                Category = input.Category
+            };
             _db.Products.Add(product);
             await _db.SaveChangesAsync();
 
-            var output = new ProductDto { Id = product.Id, Name = product.Name, Price = product.Price };
+            var output = new ProductDto
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+                Quantity = product.Quantity,
+                Category = product.Category
+            };
             return CreatedAtAction(nameof(GetById), new { id = output.Id }, output);
         }
 
@@ -54,6 +81,9 @@ namespace tesstt.Controllers
 
             p.Name = input.Name;
             p.Price = input.Price;
+            p.Quantity = input.Quantity;
+            p.Category = input.Category;
+
             await _db.SaveChangesAsync();
 
             return NoContent();
